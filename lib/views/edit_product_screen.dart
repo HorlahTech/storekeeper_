@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:store_keeper/main.dart';
+
 import 'package:store_keeper/models/product_model.dart';
 import 'package:store_keeper/notifier/product_notifier.dart';
+import 'package:store_keeper/shared/button.dart';
 
 class AddEditProductScreen extends ConsumerStatefulWidget {
   final Product? product;
@@ -173,7 +173,7 @@ class _AddEditProductScreenState extends ConsumerState<AddEditProductScreen>
             _buildImageSection(),
             const SizedBox(height: 32),
 
-            _buildTextField(
+            AppButton(
               controller: _nameController,
               label: 'Product Name',
 
@@ -187,7 +187,7 @@ class _AddEditProductScreenState extends ConsumerState<AddEditProductScreen>
             ),
             const SizedBox(height: 20),
 
-            _buildTextField(
+            AppButton(
               controller: _quantityController,
               label: 'Quantity',
 
@@ -205,7 +205,7 @@ class _AddEditProductScreenState extends ConsumerState<AddEditProductScreen>
               },
             ),
             const SizedBox(height: 20),
-            _buildTextField(
+            AppButton(
               controller: _priceController,
               label: 'Price',
 
@@ -325,55 +325,6 @@ class _AddEditProductScreenState extends ConsumerState<AddEditProductScreen>
           ),
         ),
       ),
-    );
-  }
-
-  Widget _buildTextField({
-    required TextEditingController controller,
-    required String label,
-
-    required String hint,
-    TextInputType? keyboardType,
-    List<TextInputFormatter>? inputFormatters,
-    String? Function(String?)? validator,
-  }) {
-    return TextFormField(
-      controller: controller,
-      keyboardType: keyboardType,
-      inputFormatters: inputFormatters,
-      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-      decoration: InputDecoration(
-        labelText: label,
-        hintText: hint,
-
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.grey[300]!),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.grey[300]!),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: Color(0xFFFF6B35), width: 2),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: Colors.red),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: Colors.red, width: 2),
-        ),
-        filled: true,
-        fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 16,
-        ),
-      ),
-      validator: validator,
     );
   }
 
