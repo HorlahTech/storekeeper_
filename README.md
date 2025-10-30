@@ -1,16 +1,4 @@
-# store_keeper
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Github Repo link: https://github.com/HorlahTech/storekeeper_
+Appetizer link: https://appetize.io/app/b_m5d4xd6i235ztalxvsbd5nb4zu
+Demo video Link: https://drive.google.com/file/d/1ngZDg7g23gNSJxTO7WhJY6E9iDRwpqDL/view?usp=drive_link
+APK link: https://drive.google.com/file/d/15pqm5t2z5-mp725zIv9AsZZimGiCXqSy/view?usp=sharing
